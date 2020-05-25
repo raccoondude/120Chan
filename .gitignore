@@ -1,3 +1,5 @@
 pychan/pychan/settings.py
 pychan/db.sqlite3
 pychan/media
+pychan/Core/__pycache__
+pychan/pychan/__pycache__
