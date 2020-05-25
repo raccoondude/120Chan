@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from .models import *
 # Create your views here.
 
@@ -33,7 +33,7 @@ def postingHandler(request, board_ID):
             ip = request.META.get('REMOTE_ADDR')
         OwO = Post(Post_Text=Text, Post_IP=ip, Post_Photo=File, Post_Board=currentBoard)
         OwO.save()
-        return HttpResponse("lol")
+        return HttpResponseRedirect(board_ID)
     else:
         try:
             currentBoard = board.objects.get(board_ID=board_ID)
