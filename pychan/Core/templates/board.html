@@ -10,6 +10,7 @@
       <p>{{boardDesc|linebreaksbr}}</p>
     </div>
     <br>
+    {% if Posts %}
     {% for Post in Posts %}
     <div class="box">
       <table>
@@ -18,7 +19,10 @@
           <th><p>{{Post.Post_Text|linebreaksbr}}</p></th>
         </tr>
       </table>
-    </div>
+    </div><br>
     {% endfor %}
+    {% else %}
+    <p class="center">No posts ;w;</p>
+    {% endif %}
   </body>
 </html>
