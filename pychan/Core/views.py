@@ -15,6 +15,7 @@ def boardHandler(request, board_ID):
     return render(request, "board.html", {"boardName":currentBoard.board_name,
     "boardDesc":currentBoard.board_desc,
     "boardPic":currentBoard.board_picture,
+    "boardID":currentBoard.board_ID,
     "Posts":Posts,
     })
 
