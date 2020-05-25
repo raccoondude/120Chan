@@ -11,7 +11,9 @@ def boardHandler(request, board_ID):
         currentBoard = board.objects.get(board_ID=board_ID)
     except board.DoesNotExist:
         return HttpResponse("404")
+    Posts = Post.objects.filter(Post_Board=currentBoard)
     return render(request, "board.html", {"boardName":currentBoard.board_name,
     "boardDesc":currentBoard.board_desc,
-    "boardPic":currentBoard.board_picture
+    "boardPic":currentBoard.board_picture,
+    "Posts":Posts,
     })

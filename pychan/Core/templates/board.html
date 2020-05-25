@@ -5,7 +5,20 @@
   </head>
   <body>
     <div class="box" style="">
-      <p class="align">Welcome to {{boardName}}!</p>
-      <img src="/media/{{boardPic}}" style="width: 100px; height: 100px;">
+      <p style="text-align: center" class="align">Welcome to {{boardName}}!</p>
+      <img class="pfp" src="/media/{{boardPic}}" style="width: 100px; height: 100px;">
+      <p>{{boardDesc|linebreaksbr}}</p>
+    </div>
+    <br>
+    {% for Post in Posts %}
+    <div class="box">
+      <table>
+        <tr>
+          <th><img src="/media/{{Post.Post_Photo}}" class="i"></th>
+          <th><p>{{Post.Post_Text|linebreaksbr}}</p></th>
+        </tr>
+      </table>
+    </div>
+    {% endfor %}
   </body>
 </html>
