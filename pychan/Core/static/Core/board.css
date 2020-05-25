@@ -1,0 +1,22 @@
+.title {
+  text-align: center;
+}
+
+.box {
+  background-color: wheat;
+  border-style: solid;
+  border-color: black;
+}
+
+.center {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+} 
