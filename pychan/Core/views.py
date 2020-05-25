@@ -33,7 +33,7 @@ def postingHandler(request, board_ID):
             ip = request.META.get('REMOTE_ADDR')
         OwO = Post(Post_Text=Text, Post_IP=ip, Post_Photo=File, Post_Board=currentBoard)
         OwO.save()
-        return HttpResponseRedirect(board_ID)
+        return HttpResponseRedirect("/"+board_ID)
     else:
         try:
             currentBoard = board.objects.get(board_ID=board_ID)
