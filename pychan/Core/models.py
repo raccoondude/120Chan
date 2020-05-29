@@ -14,3 +14,7 @@ class Post(models.Model):
     Post_IP = models.CharField(max_length=20)
     Post_Photo = models.ImageField(upload_to="post")
     Post_Board = models.ForeignKey(board, on_delete=models.CASCADE)
+
+class Rule(models.Model):
+    Rule_ID = models.AutoField(primary_key=True)
+    Rule_Text = models.CharField(max_length=1000)

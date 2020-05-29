@@ -80,3 +80,6 @@ def postingHandler(request, board_ID):
         except board.DoesNotExist:
             return HttpResponse("404")
         return render(request, "posting.html", {"name":currentBoard.board_name})
+
+def ruleBook(request):
+    return HttpResponse("lol finish me")
